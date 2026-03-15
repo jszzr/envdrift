@@ -104,7 +104,11 @@ function collectFiles(rootDir, { includeDirs, ignoreDirs, extensions }) {
           continue;
         }
 
-        if (includeDirs.size > 0 && !isInIncludedPath(relative, includeDirs)) {
+        if (
+          includeDirs.size > 0 &&
+          !isInIncludedPath(relative, includeDirs) &&
+          !isAncestorOfIncludedPath(relative, includeDirs)
+        ) {
           continue;
         }
 
@@ -137,6 +141,13 @@ function isInIncludedPath(relativePath, includeDirs) {
   return [...includeDirs].some(
     (dir) => relativePath === dir || relativePath.startsWith(`${dir}${path.sep}`)
   );
+}
+
+function isAncestorOfIncludedPath(relativePath, includeDirs) {
+  if (!relativePath) {
+    return true;
+  }
+  return [...includeDirs].some((dir) => dir.startsWith(`${relativePath}${path.sep}`));
 }
 
 function analyzeDrift(rootDir, options = {}) {
@@ -203,4 +214,5 @@ module.exports = {
   parseEnvExample,
   parseCSV,
   scanContentForEnvKeys,
+  isAncestorOfIncludedPath,
 };

@@ -51,3 +51,15 @@ test("CLI exit code follows strict mode", () => {
   const strict = spawnSync("node", [cli, root, "--strict"], { encoding: "utf8" });
   assert.equal(strict.status, 1);
 });
+
+test("include supports nested directories", () => {
+  const root = makeFixture({
+    ".env.example": "NESTED_OK=\n",
+    "apps/web/src/main.ts": "console.log(process.env.NESTED_OK)\n",
+    "apps/api/main.ts": "console.log(process.env.SHOULD_NOT_SCAN)\n",
+  });
+
+  const result = analyzeDrift(root, { includeDirs: "apps/web" });
+  assert.deepEqual(result.missingKeys, []);
+  assert.deepEqual(result.usedKeys, ["NESTED_OK"]);
+});
