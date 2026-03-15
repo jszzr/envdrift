@@ -94,7 +94,7 @@ It finds:
 
 Great for CI and onboarding.
 
-Repo: https://github.com/<your-username>/envdrift
+Repo: https://github.com/jszzr/envdrift
 ```
 
 ## Hacker News title ideas
@@ -114,7 +114,7 @@ Repo: https://github.com/<your-username>/envdrift
 
 适合放到 CI 里做 fail-fast，减少同事拉项目后的配置踩坑。
 
-项目地址：https://github.com/<your-username>/envdrift
+项目地址：https://github.com/jszzr/envdrift
 ```
 
 ## Metrics to Track

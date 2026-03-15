@@ -2,6 +2,9 @@
 
 `envdrift` is a tiny CLI that detects drift between environment variables used in source code and keys documented in `.env.example`.
 
+[![CI](https://github.com/jszzr/envdrift/actions/workflows/ci.yml/badge.svg)](https://github.com/jszzr/envdrift/actions/workflows/ci.yml)
+![GitHub stars](https://img.shields.io/github/stars/jszzr/envdrift?style=social)
+
 It does one thing:
 - Find keys used in code but missing in `.env.example`
 - Find keys in `.env.example` that are no longer used in code
@@ -20,7 +23,7 @@ Config drift breaks onboarding and CI in silent ways:
 ### Run from source
 
 ```bash
-git clone https://github.com/<your-username>/envdrift.git
+git clone https://github.com/jszzr/envdrift.git
 cd envdrift
 node bin/envdrift.js /path/to/your/project
 ```
