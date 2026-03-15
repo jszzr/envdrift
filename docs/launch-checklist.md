@@ -21,3 +21,6 @@
 - [ ] Day 3: 掘金 or V2EX post
 - [ ] Day 4-5: 5 integration PRs into external repos
 - [ ] Day 7: release `v0.1.1` with feedback fixes
+
+Reference schedule:
+- `docs/launch-calendar-2026-03-15.md`
