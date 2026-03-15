@@ -1,0 +1,24 @@
+{
+  "name": "envdrift",
+  "version": "0.1.0",
+  "description": "Detect drift between environment variables used in source code and .env.example",
+  "bin": {
+    "envdrift": "bin/envdrift.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/envdrift.js"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "cli",
+    "developer-experience",
+    "ci"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
