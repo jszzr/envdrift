@@ -104,12 +104,6 @@ Only uppercase keys are matched by design (`FOO_BAR`).
 npm test
 ```
 
-## Launch Assets
-
-See:
-- [`docs/research-demand.md`](docs/research-demand.md): evidence-backed demand research
-- [`docs/promotion-plan.md`](docs/promotion-plan.md): launch strategy and post templates
-
 ## License
 
 MIT
